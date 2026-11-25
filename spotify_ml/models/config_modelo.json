@@ -1,0 +1,53 @@
+{
+  "modelo_final": "Random Forest",
+  "archivo": "modelo_final.joblib",
+  "regla_seleccion": "mayor R² en CV; si hay modelos a menos de 0,005 del mejor, el más simple",
+  "variables": [
+    "duration_ms",
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo",
+    "mode",
+    "explicit",
+    "key",
+    "time_signature",
+    "track_genre"
+  ],
+  "metricas_test": {
+    "R² train": 0.578,
+    "R² CV": 0.405,
+    "R² CV std": 0.005,
+    "R² test": 0.415,
+    "RMSE test": 14.888,
+    "MAE test": 10.364,
+    "Diferencia CV − test": -0.01
+  },
+  "mejores_hiperparametros": {
+    "Ridge": {
+      "alpha": 3000
+    },
+    "Árbol de decisión": {
+      "max_depth": 8,
+      "min_samples_leaf": 100
+    },
+    "Random Forest": {
+      "min_samples_leaf": 3,
+      "max_samples": 0.3,
+      "max_features": 0.5,
+      "max_depth": null
+    },
+    "Gradient Boosting": {
+      "min_samples_leaf": 50,
+      "max_leaf_nodes": 63,
+      "max_iter": 400,
+      "learning_rate": 0.03,
+      "l2_regularization": 1
+    }
+  }
+}
